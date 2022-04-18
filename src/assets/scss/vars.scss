@@ -1,0 +1,72 @@
+$breakpoints: (
+  'extra-small': 375px,
+  'small':  425px,
+  'medium': 1024px,
+  'large':  1200px,
+  'extra-large': 1440px
+) !default;
+
+@mixin if_size($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+    @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+
+//common colors
+$accent: #3480C0;
+$green: #53A451 ;
+$red: #CB444A;
+$yellow: #F7AE00;
+
+//Background colors
+$bg-blue: #F6F8FA;
+$bg-placeholder-gray: #F6F8FA;
+$bg-search-gray: #F8F8F8;
+$bg-inputs-blue: #F4F7FD;
+
+//Text colors
+$text-gray: #8A93B1;
+$text-darkblue:#174477;
+$text-inputs-gray: #D0D0D0;
+
+//Other colors
+$line-gray: #F6F6F6;
+$placeholder-gray: #F3F4F6;
+
+
+
+//adaptive
+
+:root{
+    //такое обьявление сделано чтобы менять через js значение переменной
+    --side-menu-width: 230px ;
+    --menu-top-height: 88px;
+    --widget-block-padding: 16px;
+    //обнуляем переменные бутстрапа
+    --bs-font-sans-serif: ;
+    --bs-body-bg: ;
+    @include if_size('small'){
+        --side-menu-width: 0px ;
+        --menu-top-height: 130px;
+        --widget-block-padding: 8px;
+    }
+}
+
+
+//обнуляем стили бутстрапа
+::after, ::before {
+    box-sizing:initial;
+}
+button, input, optgroup, select, textarea {
+    
+     line-height: normal; 
+}
+
+

@@ -1,0 +1,67 @@
+@import "../../assets/scss/vars.scss";
+
+.customDatePickerWidth, 
+.customDatePickerWidth > div.react-datepicker-wrapper, 
+.customDatePickerWidth > div > div.react-datepicker__input-container
+.customDatePickerWidth > div > div.react-datepicker__input-container input {
+   width: 100%;
+   margin: 16px 0 25px 0;
+}
+
+
+.calendar {
+    border: none;
+    .react-datepicker__header {
+        background-color: transparent;
+        border: none;
+    }
+    //arrows of months
+    .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__month-year-read-view--down-arrow, .react-datepicker__navigation-icon::before{
+        border-color: $accent; //цвет стрелок смены месяца
+        width: 5px;
+        height: 5px;
+        border-width: 2px 2px 0 0;
+    }
+    .react-datepicker__day-names, .react-datepicker__week {
+        white-space: break-spaces;
+    }
+    .react-datepicker__day-names {
+        margin-top: 5px; //расстояние от названий месяцев до названий дней недели 
+        margin-bottom: -8px; //расстояние от названий дней недели до дней
+        .react-datepicker__day-name{
+            font-weight: 600; //дни недели
+        }
+    }
+
+
+    .react-datepicker__month {
+        margin: 0; 
+        text-align: center;
+    }
+
+    //каждый день
+    .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: initial;
+        width: 1.3rem;
+    }
+
+    //выбранный день
+    .react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range, .react-datepicker__month-text--selected, .react-datepicker__month-text--in-selecting-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--selected, .react-datepicker__quarter-text--in-selecting-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--selected, .react-datepicker__year-text--in-selecting-range, .react-datepicker__year-text--in-range{
+        background-color: $accent;
+    }
+    a {
+        display: block;
+    }
+    .react-datepicker__navigation-icon {
+        
+        top: 1px;
+        
+    }
+
+    .prevDates{
+        color: $text-gray;
+    }
+}
+

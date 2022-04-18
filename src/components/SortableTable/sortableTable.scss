@@ -1,0 +1,38 @@
+@import '../../assets/scss/vars.scss';
+  .header-row {
+    [sorted='yes']{
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: url('../../assets/img/icons/sorted.svg') no-repeat;
+        top: 25%;
+        right: -16px;
+
+      }
+    }
+    button {
+      background: transparent;
+      border: none;
+      padding: 0; 
+      color: $text-darkblue;
+      font-weight: 600;
+      text-align: left;
+      width: max-content;
+      
+    }
+    
+    border-top: 2px solid $line-gray;
+    border-bottom: 2px solid $line-gray;
+
+    
+  }
+
+ table {
+  width: 100%;
+  th,td {
+    padding: 7px 0;
+  }
+ }

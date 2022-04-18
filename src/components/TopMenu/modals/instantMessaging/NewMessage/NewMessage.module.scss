@@ -1,0 +1,56 @@
+@import '../../../../../assets/scss/vars.scss';
+
+.modalTitle{
+    position: relative;
+}
+.textarea {
+    padding-left: 12px;
+}
+
+.newMessageButton{
+    position: absolute;
+    right: 90px;
+    top: calc(1rem - 4px); //as the padding-top of parent - 
+
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 23px;
+    background: $text-darkblue;
+    border-radius: 24px;
+    color: white;
+    height: fit-content;
+    pointer-events: none;
+
+}
+
+.submit{
+    padding: 0 44px;
+    width: 132px;
+    margin-right: 12px;
+}
+
+.cancel{
+    padding: 0 44px;
+    background: $red;
+    width: 132px;
+}
+
+.wrapper {
+    margin-top: 20px;
+}
+
+.input_search{
+    height: 32px;
+    width: 262px;
+    margin-left: 32px;
+}
+
+.checkboxWrapper{
+
+}
+
+.fullWidthEpmtyDiv{
+    width: 100%;
+}

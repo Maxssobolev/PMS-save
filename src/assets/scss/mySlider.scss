@@ -1,0 +1,44 @@
+@import './vars.scss';
+
+.slick-prev, .slick-next{
+    width: 32px;
+    height: 32px;
+    top: 37%;
+    z-index: 10;
+    @include if_size('small'){
+        top: initial;
+        bottom: -70px;
+    }
+}
+
+.slick-arrow.slick-prev{
+    left: -7px;
+    &::before{
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: url("../img/icons/left-arrow-paginate.svg") no-repeat center center, #F6F8FA;
+        border-radius: 5px;
+    }
+    @include if_size('small'){
+        left: 75%;
+    }
+
+    
+}
+
+.slick-arrow.slick-next{
+    right: -7px;
+    &::before{
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background: url("../img/icons/right-arrow-paginate.svg") no-repeat center center, #F6F8FA;
+        border-radius: 5px;
+    }
+    @include if_size('small'){
+        right: 1%;
+    }
+}
